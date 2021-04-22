@@ -1,0 +1,322 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* CSS from previous project */
+h1{
+  background: rgba(0,0,0,.5);
+  font-size: 250%;
+  color: whitesmoke;
+  text-align: center;
+}
+h2{
+  font-size: 250%;
+  color: whitesmoke;
+  text-align: center;
+}
+#headerInfo{
+  font-size: 50%;
+  text-align: right;
+  float: right;
+}
+#Acro{
+  font-size: 80%;
+  float: left;
+}
+#TotalHours{
+  font-size: 30%;
+  float: right;
+}
+body {
+ /* background: url(../city.png); */
+ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+ background-color: #1e1f26;
+ background-attachment: scroll;
+ background-size: 100% 100%;
+ flex-direction: column;
+}
+#main{
+  display: flex;
+  background: rgba(0,0,0, 0.5);
+  flex-direction: row;
+  height: 95vh;
+}
+#Left{
+   flex-direction: column;
+   width: 34vw;
+}
+#Right{
+   flex-direction: column;
+}
+#UL{
+  font-size: 250%;
+  color: whitesmoke;
+  background: rgba(255,255,255, .1);
+  text-align: left;
+  margin: 15px;
+  width: 28vw;
+}
+#UL div{
+  font-size: 50%;
+  color: #fff;
+  background-color: #1d1e25;
+  cursor: pointer;
+
+  color: #007bff;
+}
+#LL{
+  position: relative;
+  bottom: 0;
+  width: 28vw;
+  font-size: 200%;
+  margin: 15px;
+  text-align: center;
+}
+#kbb{
+  margin: 20px;
+  display: block;
+  background-color: #1d1e25;
+  color: white;
+}
+.navBut{
+  margin: 20px;
+  display: block;
+  background-color: #1d1e25;
+  cursor: pointer;
+  color: white;
+}
+#signup{
+  text-align: center;
+}
+.menuBut{
+  width:100px;
+  height:40px;
+  margin: 20px;
+  display: inline-block;
+  background-color: #1d1e25;
+  cursor: pointer;
+  color: white;
+}
+section{
+  display: block;
+}
+.loginBut{
+  width:100px;
+  height:40px;
+  margin: 20px;
+  font-size: 200%;
+  display: inline-block;
+  background-color: #1d1e25;
+  cursor: pointer;
+  color: white;
+}
+
+.loginRow{
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      margin-right: -15px;
+      margin-left: -15px;
+      margin-top: 10%;
+}
+.loginColForm {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  -ms-flex: 0 0 41.666667%;
+  flex: 0 0 41.666667%;
+  max-width: 41.666667%;
+} 
+.loginCol {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  -ms-flex: 0 0 25%;
+  flex: 0 0 25%;
+  max-width: 25%;
+}  
+
+#button{
+  color: white;
+}
+#submitButton{
+cursor: pointer;
+}
+#LR p{
+  color: white;
+  text-align: end;
+}
+#CourseFinder{
+  font-weight: bold;
+  text-align: center;
+  margin: 20px;
+  height:25vh;
+  width: 836px;
+  background: rgba(255,255,255, .3);
+}
+#FinderHeader{
+  color: white;
+  font-size: 200%;
+}
+.year{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+.sem{
+  width:250px;
+  text-align: center;
+  background-color: white;
+  font-weight: bold;
+  border: 1px solid black;
+  margin: 5px;
+  padding: 10px;
+  font-size: 90%;
+  transition: transform .3s; /* Animation */
+}
+.sem:hover{
+  transform: scale(1.05);
+  padding: 8px;
+}
+
+.class:hover{
+  background-color: rgba(0,0,0, 0.5);
+  opacity: 1.0;
+  color: white;
+  cursor: pointer;
+}
+.class{
+  text-align: start;
+  font-weight: normal;
+  margin: 7px;
+}
+a:link{
+color: white;
+}
+
+a:visited{
+color: white;
+}
+
+a:hover{
+text-decoration: none;
+}
+form {
+  color: white;
+  text-align: center;
+  background: rgba(255,255,255, .1);
+  font-size: 75%;
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+}  
+form span {
+  margin-bottom: 3%;
+}
+
+.innerAccordion{
+  border: none;
+}
+.innerAccordion li{
+  color: white;
+  border: none;
+  font-size: 400%;
+}
+.dataTables_filter {
+float: right;
+text-align: right;
+}
+
+#catalogTable_wrapper {
+width: 100%;
+max-width: 100%;
+}
+
+tr {
+display: table-row;
+}
+@media only screen and (max-width: 1350px) {
+  #main{
+      flex-direction: column;
+      height: 300vh;
+  }
+  .sem{
+      font-size: 125%;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      width:90vw;
+  }
+  label{
+      font-size: 150%;
+  }
+  #UL{
+      width:93vw;
+  }
+  #LL{
+      width:93vw;
+  }
+  #CourseFinder{
+      width: 90vw;
+  }
+  #UL div{
+      font-size: 100%;
+  }
+  form{
+      font-size: 75%;
+  }
+  input{
+      padding: 12px;
+      margin: 5px;
+  }
+  #submitButton{
+      padding: 20px;
+      width:80%;
+  }
+  .innerAccordion li{
+      font-size: 80%;
+  }
+  h1{
+      font-size: 140%;
+  }
+
+}
