@@ -7,10 +7,10 @@ class Year extends Component {
 	  return (
 		<div class="year">
 			<h3>{this.props.year}</h3>
-			<div class="yearContent">
-				<Term catalog={this.props.catalog} data={this.props.data['fa']} term="Fall" />
-				<Term catalog={this.props.catalog} data={this.props.data['sp']} term="Spring" />
-				<Term catalog={this.props.catalog} data={this.props.data['su']} term="Summer" />
+			<div class="year">
+				<Term catalog={this.props.catalog} data={this.props.data['fall']} term="Fall" year={this.props.year} />
+				<Term catalog={this.props.catalog} data={this.props.data['spring']} term="Spring" year={this.props.year} />
+				<Term catalog={this.props.catalog} data={this.props.data['summer']} term="Summer" year={this.props.year} />
 			</div>
 		</div>
 	  );

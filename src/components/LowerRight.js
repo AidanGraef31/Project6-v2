@@ -3,20 +3,24 @@ import React, {Component} from 'react';
 class LowerRight extends Component {
 	
 	render (){
-        let catalogCourses = [];
-        let catalog = "";
+        var catalogCourses = [];
+        var catalogArray = [];
+        var catalog = "";
         if(this.props.catalog) {
-            // catalog = this.props.catalog.courses;
-            // for(var i=0; i < catalog.length; i++) {
-            //     catalogCourses[i] = catalog.courses[i];
-            // }
-            // catalogCourses = catalog.map((value, key) => {
-            //     return(
-            //         <tr role="row" class='odd'>
-            //             <td>{key}</td>
-            //         </tr>
-            //     );
-            // });
+            catalog = this.props.catalog.courses;
+            for(var course in catalog) {
+                catalogArray.push([course, catalog[course]]);
+            }
+            catalogCourses = catalogArray.map((value) => {
+                return(
+                    <tr role="row" class="odd">
+                        <td>{value[1].id}</td>
+                        <td>{value[1].name}</td>
+                        <td>{value[1].credits}</td>
+                        <td>{value[1].description}</td>
+                    </tr>
+                 );
+            });
         }
 
         return (
@@ -33,15 +37,7 @@ class LowerRight extends Component {
                                     </tr>
                                 </thead>
                                 <tbody id="tableBody">
-                                    <tr role="row" id="nameColumn">
-                                    <td>oops</td>
-                                    </tr>
-                                    <tr role="row" id="titleColumn">
-                                    <td>oops</td>
-                                    </tr>
-                                <tr role="row" id="creditsColumn">
-                                    <td>oops</td>
-                                </tr>
+                                    {catalogCourses}
                                 </tbody>
                         </table>
                         <p>© Not actually copyrighted 2021</p>
