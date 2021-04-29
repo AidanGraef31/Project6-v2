@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Redirect} from "react-router-dom";
 import $ from "jquery";
 import DataTable from "datatables.net";
 import Term from './components/Term';
@@ -87,7 +88,7 @@ class Semester {
 
 
 
-class App extends Component {
+class Ape extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -139,6 +140,39 @@ class App extends Component {
 
     convertPlan(currPlan) {
             var plan = new Plan(currPlan.name, currPlan.currYear, currPlan.major, currPlan.student, currPlan.currYear, currPlan.currTerm);
+            
+            var cs2210 = { id: "CS-2210", name: "Java", term: "Fall", year: 2018, hours: 3 };
+            currPlan.courses.push(cs2210);
+
+            var cs3510 = { id: "CS-3510", name: "Compiler", term: "Spring", year: 2018, hours: 3 };
+            currPlan.courses.push(cs3510);
+
+            var cs4310 = { id: "CS-4310", name: "Cyber Ops", term: "Fall", year: 2019, hours: 3 };
+            currPlan.courses.push(cs4310);
+
+            var cs3410 = { id: "CS-3410", name: "Algorithms", term: "Spring", year: 2019, hours: 3 };
+            currPlan.courses.push(cs3410);
+
+            var cs3610 = { id: "CS-3610", name: "Database", term: "Spring", year: 2018, hours: 3 };
+            currPlan.courses.push(cs3610);
+
+            var cs4330 = { id: "CS-4330", name: "Software Security", term: "Fall", year: 2019, hours: 3 };
+            currPlan.courses.push(cs4330);
+
+            var cs4410 = { id: "CS-4410", name: "Parallel Computing", term: "Fall", year: 2017, hours: 3 };
+            currPlan.courses.push(cs4410);
+
+            var cs4710 = { id: "CS-4710", name: "Computer Graphics", term: "Fall", year: 2017, hours: 3 };
+            currPlan.courses.push(cs4710);
+
+            var egcp1010 = { id: "EGCP-1010", name: "DLD", term: "Spring", year: 2016, hours: 3 };
+            currPlan.courses.push(egcp1010);
+
+            var cs4810 = { id: "CS-4810", name: "Senior Design I", term: "Spring", year: 2017, hours: 3 };
+            currPlan.courses.push(cs4810);
+
+            var cs4820 = { id: "CS-4820", name: "Senior Design II ", term: "Fall", year: 2018, hours: 3 };
+            currPlan.courses.push(cs4820);
 
           // add your code from Proj#2 here
           for (var i = 0; i < currPlan.courses.length; i++) {
@@ -171,9 +205,19 @@ class App extends Component {
         return plan;
     }
 
-
+    // validateLogin() {
+    //     if(localStorage.getItem("username") == null) {
+    //         return false;
+    //     } else {
+    //         return true;
+    //     }
+    // }
 
     render() {
+        // if(!validateLogin()) {
+        //     return <Redirect to="/App" />
+        // }
+
         return ( 
             <div className="App" id="main"> 
             { /* <script src="https://code.jquery.com/jquery-1.12.4.js"></script> */ } 
@@ -183,13 +227,9 @@ class App extends Component {
             <Banner/>
             <Main plan = { this.state.plan } catalog = { this.state.catalog } requirements = { this.state.requirements }/>
 
-            { /*<BannerRight planList={this.state.planList}/> */ } 
-            { /*<UpperLeft requirements={this.state.requirements} catalog={this.state.catalog} /> */ }
-            { /* <UpperRight plan={this.state.plan} catalog={this.state.catalog}/> */ } 
-            { /*<LowerLeft /> */ } { /*<LowerRight catalog={this.state.catalog} /> */ } 
             </div>
         );
     }
 
 }
-export default App;
+export default Ape;

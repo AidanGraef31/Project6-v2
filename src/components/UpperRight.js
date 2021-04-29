@@ -14,7 +14,6 @@ class UpperRight extends Component {
 	  }
 	  return (
 		<div id="UR">
-			<h3>My Plan</h3>
 			<div id="plan">
 				{yrs}
 			</div>
